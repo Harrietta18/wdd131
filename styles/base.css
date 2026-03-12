@@ -1,66 +1,82 @@
 /* --- General Page Styles --- */
 body {
-    font-family: 'Roboto', Helvetica, sans-serif; /* Use your chosen Google Font here */
+    font-family: 'Roboto', Helvetica, sans-serif;
     margin: 0;
     padding: 0;
+    line-height: 1.6;
 }
 
-/* --- Header Styles (Step 3.3) --- */
+/* --- Header Styles --- */
 header {
-    background-color: #003366; /* Example BYU-I Blue */
+    background-color: #003366; /* BYU-I Blue theme */
     color: white;
-    padding: 1rem;
+    padding: 2rem 0;
     text-align: center;
 }
 
 header span#course-title {
-    display: block; /* Required by your assignment instructions */
-    font-size: 1.5rem;
-    padding: 0.5rem;
+    display: block; /* Required for centering and layout */
+    font-size: 1.7rem;
+    font-weight: bold;
 }
 
-/* --- Navigation Styles (Step 3.4 & 3.5) --- */
+/* --- Navigation Styles (Flexbox) --- */
 nav {
-    display: flex; /* Required Flexbox */
+    display: flex; 
     justify-content: center;
     background-color: #333;
 }
 
 nav a {
     color: white;
-    padding: 1rem;
+    padding: 1rem 1.5rem;
     text-decoration: none;
-    transition: 0.3s;
+    transition: background-color 0.3s ease;
 }
 
 nav a:hover {
-    background-color: #f1f1f1; /* Required Hover effect */
-    color: #003366;
+    background-color: #555;
+    color: #ffeb3b;
 }
 
-/* --- Main Content Styles (Step 3.6 & 3.7) --- */
+/* --- Main Content Styles (Grid) --- */
 main {
-    max-width: 800px; /* Limited width as requested */
-    margin: 0 auto;   /* Centered horizontally */
-    padding: 20px;
-    display: grid;    /* Required CSS Grid */
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    display: grid; 
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
 }
 
-.card {
-    border: 1px solid #ccc;
-    padding: 1rem;
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+/* Style for the single H1 inside main */
+main h1 {
+    grid-column: 1 / -1; 
+    text-align: center;
+    color: #003366;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
 }
 
-/* --- Footer Styles (Step 8) --- */
+.card {
+    border: 1px solid #ddd;
+    padding: 1.5rem;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.card h2 {
+    margin-top: 0;
+    color: #003366;
+}
+
+/* --- Footer Styles --- */
 footer {
-    border-top: 1px solid #333;
-    padding: 1rem;
+    padding: 2rem;
     text-align: center;
-    background-color: #f9f9f9;
+    background-color: #f1f1f1;
+    border-top: 1px solid #ccc;
+    margin-top: 2rem;
 }
 
 footer p {
