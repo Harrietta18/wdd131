@@ -1,24 +1,37 @@
-/* Base Mobile Styles */
+/* temples.css - Mobile First */
 body { font-family: 'Roboto', sans-serif; margin: 0; }
-header, footer { background-color: #003366; color: white; text-align: center; padding: 1rem; position: relative; }
+header, footer { background-color: #003366; color: white; text-align: center; padding: 1rem; }
 
-/* Navigation - Mobile Menu hidden by default */
-#menu { font-size: 2.5rem; background: none; border: none; color: white; cursor: pointer; position: absolute; top: 10px; right: 10px; }
-
-nav ul { display: none; list-style: none; padding: 0; margin: 0; }
-nav ul.show { display: flex; flex-direction: column; }
-
-nav a { display: block; padding: 1rem; color: white; text-decoration: none; background-color: #333; text-align: center; }
-nav a:hover { background-color: #444; color: #ffeb3b; }
-
-/* Main Grid - 1 Column for mobile */
-.temple-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-    padding: 1rem;
+/* Hamburger Icon using CSS */
+#menu {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    text-decoration: none;
+    padding: .5rem .75rem;
+    color: white;
+    position: absolute;
+    top: 10px;
+    right: 10px;
 }
 
-figure { margin: 0; border: 1px solid #ddd; background: #eee; }
-img { width: 100%; height: auto; display: block; }
-figcaption { padding: 10px; text-align: center; font-weight: bold; }
+#menu::before { content: "≡"; }
+#menu.open::before { content: "X"; }
+
+/* Hide nav by default on mobile */
+.navigation { display: none; list-style: none; padding: 0; margin: 0; background-color: #333; }
+.navigation.open { display: block; }
+
+.navigation li a {
+    display: block;
+    padding: 1rem;
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px solid #444;
+}
+
+.navigation li a:hover { background-color: #555; color: #ffeb3b; }
+
+/* Grid for Mobile */
+.res-grid { display: grid; grid-template-columns: 1fr; gap: 20px; padding: 1rem; }
+img { width: 100%; height: auto; }

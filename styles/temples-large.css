@@ -1,18 +1,16 @@
-/* Media Query for Large Views - This fixes the 'No media query rules' error */
+/* temples-large.css */
 @media (min-width: 768px) {
-    #menu { display: none; } /* Hide hamburger on desktop */
+    #menu { display: none; } /* Hide hamburger */
 
-    nav ul {
-        display: flex ; /* Always show menu */
-        flex-direction: row;
+    .navigation {
+        display: flex !important; /* Show horizontal menu */
         justify-content: center;
         background-color: #333;
     }
 
-    nav a { border-bottom: none; }
+    .navigation li { flex: 1 1 auto; max-width: 150px; }
 
-    .temple-grid {
-        /* Changes to 3 columns on desktop using repeat and minmax */
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    .res-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns */
     }
 }
