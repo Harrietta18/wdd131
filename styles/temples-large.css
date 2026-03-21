@@ -3,7 +3,7 @@
     #menu { display: none; } /* Hide hamburger on desktop */
 
     nav ul {
-        display: flex; /* Always show menu */
+        display: flex ; /* Always show menu */
         flex-direction: row;
         justify-content: center;
         background-color: #333;
