@@ -1,12 +1,16 @@
-// Date functionality
-document.querySelector("#currentyear").textContent = new Date().getFullYear();
-document.querySelector("#lastModified").textContent = `Last Modification: ${document.lastModified}`;
+// Footer Dates
+const yearSpan = document.querySelector("#currentyear");
+yearSpan.textContent = new Date().getFullYear();
 
-// Step 4.2: Hamburger Menu Toggle
-const mainnav = document.querySelector('#animateme');
-const hambutton = document.querySelector('#menu');
+const lastMod = document.querySelector("#lastModified");
+lastMod.textContent = `Last Modification: ${document.lastModified}`;
 
-hambutton.addEventListener('click', () => {
-    mainnav.classList.toggle('show');
-    hambutton.textContent = hambutton.textContent === "≡" ? "X" : "≡";
+// Hamburger Menu Toggle
+const mainNav = document.querySelector('#animateme');
+const hamButton = document.querySelector('#menu');
+
+hamButton.addEventListener('click', () => {
+    mainNav.classList.toggle('show');
+    // Change button text between ≡ and X
+    hamButton.textContent = hamButton.textContent === "≡" ? "X" : "≡";
 });

@@ -1,8 +1,8 @@
-/* General Setup */
-body { font-family: 'Roboto', sans-serif; margin: 0; }
+/* Base Styles */
+body { font-family: 'Roboto', sans-serif; margin: 0; line-height: 1.6; }
 header, footer { background-color: #003366; color: white; text-align: center; padding: 1rem; position: relative; }
 
-/* --- Step 4.2: Hamburger Menu Styling --- */
+/* Navigation - Mobile First (Flexbox) */
 #menu {
     font-size: 2rem;
     background: none;
@@ -10,31 +10,31 @@ header, footer { background-color: #003366; color: white; text-align: center; pa
     color: white;
     cursor: pointer;
     position: absolute;
-    top: 1rem;
-    right: 1rem;
+    top: 10px;
+    right: 10px;
 }
 
-nav ul { list-style: none; padding: 0; display: none; } /* Hidden by default on mobile */
-nav ul.show { display: block; } /* Show when JS toggles the class */
+nav ul { display: none; list-style: none; padding: 0; margin: 0; flex-direction: column; }
+nav ul.show { display: flex; }
 
 nav a {
     display: block;
-    color: white;
     padding: 1rem;
+    color: white;
     text-decoration: none;
     background-color: #333;
+    border-bottom: 1px solid #444;
 }
-nav a:hover { background-color: #444; color: #ffeb3b; }
+nav a:hover { background-color: #555; color: #ffeb3b; }
 
-/* --- Step 6: Grid for Mobile (1 Column) --- */
+/* Main Content (Grid) */
+main { max-width: 1000px; margin: 0 auto; padding: 1rem; }
 .temple-grid {
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-    padding: 1rem;
+    grid-template-columns: 1fr; /* Single column for mobile */
+    gap: 1.5rem;
 }
 
-main { max-width: 1000px; margin: 0 auto; }
+figure { margin: 0; border: 1px solid #ccc; background: #eee; }
 img { width: 100%; height: auto; display: block; }
-figure { margin: 0; border: 1px solid #ddd; text-align: center; }
-figcaption { padding: 10px; background: #eee; }
+figcaption { padding: 0.5rem; text-align: center; font-weight: bold; }
