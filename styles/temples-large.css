@@ -1,0 +1,15 @@
+@media (min-width: 768px) {
+    /* Rules in here only apply to larger screens */
+    #menu { 
+        display: none; }
+
+    
+    nav ul {
+        flex-direction: row;
+        justify-content: center;
+        background-color: #333;
+    }
+    .temple-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+}
