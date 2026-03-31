@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Place Page | Nigeria</title>
+    <meta name="author" content="Erhurhe Harrietta">
+    <meta name="description" content="A page dedicated to Nigeria, featuring weather and location data.">
+    <link rel="stylesheet" href="styles/place.css">
+    <link rel="stylesheet" href="styles/place-large.css" media="screen and (min-width: 600px)">
+</head>
+<body>
+    <header>
+        <h1>Nigeria</h1>
+    </header>
+
+    <main>
+        <div class="hero">
+            <img src="images/temples.webp" alt="Landscape of Nigeria" class="hero-img">
+            <h2 class="hero-label">The Giant of Africa</h2>
+        </div>
+
+        <section class="data-container">
+            <div class="data-card">
+                <h3>Main Information</h3>
+                <p><strong>Capital:</strong> Abuja</p>
+                <p><strong>Population:</strong> 218 Million</p>
+                <p><strong>Language:</strong> English</p>
+                <p><strong>Currency:</strong> Naira</p>
+            </div>
+
+            <div class="weather-card">
+                <h3>Weather</h3>
+                <img src="images/weather-icon.png" alt="Weather icon">
+                <p><strong>Temperature:</strong> 30°C</p>
+                <p><strong>Conditions:</strong> Sunny</p>
+                <p><strong>Wind:</strong> 5 km/h</p>
+                <p id="windchill"><strong>Wind Chill:</strong> N/A</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>©<span id="currentyear"></span> | Erhurhe Harrietta | Nigeria</p>
+        <p id="lastModified"></p>
+    </footer>
+
+    <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/place.js" defer></script>
+</body>
+</html>

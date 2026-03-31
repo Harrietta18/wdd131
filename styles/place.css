@@ -1,0 +1,72 @@
+/* --- Place Page Branding --- */
+:root {
+    --primary-color: #008751;    /* Nigerian Green */
+    --secondary-color: #ffffff;  /* White */
+    --accent-color: #333333;     /* Dark Grey */
+    --body-font: 'Roboto', sans-serif;
+    --heading-font: 'Georgia', serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--body-font);
+    background-color: #f4f4f4;
+}
+
+header, footer {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 1.5rem;
+    text-align: center;
+}
+
+/* --- Hero Section --- */
+.hero {
+    position: relative; /* Context for absolute label */
+    width: 100%;
+    height: 300px;
+}
+
+.hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-label {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* --- Data and Weather Cards --- */
+.data-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.data-card, .weather-card {
+    background: white;
+    padding: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+}
+
+.data-card h3, .weather-card h3 {
+    border-bottom: 1px solid var(--primary-color);
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
