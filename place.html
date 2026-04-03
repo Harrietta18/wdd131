@@ -6,6 +6,9 @@
     <title>Place Page | Nigeria</title>
     <meta name="author" content="Erhurhe Harrietta">
     <meta name="description" content="A page dedicated to Nigeria, featuring weather and location data.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&@family=Georgia&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/place.css">
     <link rel="stylesheet" href="styles/place-large.css" media="screen and (min-width: 600px)">
 </head>
@@ -16,7 +19,11 @@
 
     <main>
         <div class="hero">
-            <img src="images/temples.webp" alt="Landscape of Nigeria" class="hero-img">
+            <picture>
+                <source srcset="images/hero-large.webp" media="(min-width: 1000px)">
+                <source srcset="images/hero-medium.webp" media="(min-width: 600px)">
+                <img src="images/temples.webp" alt="Landscape of Nigeria" class="hero-img" width="400" height="300" loading="eager">
+            </picture>
             <h2 class="hero-label">The Giant of Africa</h2>
         </div>
 
@@ -31,11 +38,11 @@
 
             <div class="weather-card">
                 <h3>Weather</h3>
-                <img src="images/weather-icon.png" alt="Weather icon">
-                <p><strong>Temperature:</strong> 30°C</p>
+                <img src="images/weather.svg" alt="Sunny" width="50" height="50">
+                <p><strong>Temperature:</strong> <span id="temp">30</span>°C</p>
                 <p><strong>Conditions:</strong> Sunny</p>
-                <p><strong>Wind:</strong> 5 km/h</p>
-                <p id="windchill"><strong>Wind Chill:</strong> N/A</p>
+                <p><strong>Wind:</strong> <span id="wind">5</span> km/h</p>
+                <p><strong>Wind Chill:</strong> <span id="windchill">N/A</span></p>
             </div>
         </section>
     </main>
