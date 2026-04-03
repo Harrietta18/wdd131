@@ -6,11 +6,16 @@
     <title>Place Page | Nigeria</title>
     <meta name="author" content="Erhurhe Harrietta">
     <meta name="description" content="A page dedicated to Nigeria, featuring weather and location data.">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&@family=Georgia&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="styles/place.css">
     <link rel="stylesheet" href="styles/place-large.css" media="screen and (min-width: 600px)">
+
+    <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/place.js" defer></script>
 </head>
 <body>
     <header>
@@ -38,7 +43,7 @@
 
             <div class="weather-card">
                 <h3>Weather</h3>
-                <img src="images/weather.svg" alt="Sunny" width="50" height="50">
+                <img src="images/weather.svg" alt="Sunny Weather Icon" width="50" height="50">
                 <p><strong>Temperature:</strong> <span id="temp">30</span>°C</p>
                 <p><strong>Conditions:</strong> Sunny</p>
                 <p><strong>Wind:</strong> <span id="wind">5</span> km/h</p>
@@ -51,8 +56,5 @@
         <p>©<span id="currentyear"></span> | Erhurhe Harrietta | Nigeria</p>
         <p id="lastModified"></p>
     </footer>
-
-    <script src="scripts/getdates.js" defer></script>
-    <script src="scripts/place.js" defer></script>
 </body>
 </html>
