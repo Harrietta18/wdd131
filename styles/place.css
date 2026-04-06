@@ -101,4 +101,12 @@ header, footer {
         bottom: 40px;
         right: 40px;
     }
+
+    footer p::after {
+    content: " 🇳🇬"; /* Adds a small flag after the footer text */
+    font-size: 1.2rem;
+    vertical-align: middle;
+    }
+
+    
 }
