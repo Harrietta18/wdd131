@@ -1,10 +1,10 @@
-/* --- Place Page Branding --- */
+/* --- Place Page Branding (RESTORED) --- */
 :root {
-    --primary-color: #008751;    /* Nigerian Green */
-    --secondary-color: #ffffff;  /* White */
+    --primary-color: #008751;    /* Nigerian Green restored */
+    --secondary-color: #ffffff;  /* White restored */
     --accent-color: #333333;     /* Dark Grey */
     --body-font: 'Roboto', sans-serif;
-    --heading-font: 'Georgia', serif;
+    --card-bg: rgba(255, 255, 255, 0.9); /* Semi-transparent white for the overlay */
 }
 
 * {
@@ -25,70 +25,80 @@ header, footer {
     text-align: center;
 }
 
-/* --- Hero Section --- */
+/* --- Hero Section with Overlay Logic --- */
 .hero {
     position: relative;
     width: 100%;
-    height: 300px;
 }
 
 .hero-img {
     width: 100%;
-    height: 100%;
+    height: auto;
+    display: block;
     object-fit: cover;
-}
-
-.hero-label {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    background-color: rgba(0, 0, 0, 0.7); /* Increased opacity for accessibility */
-    color: white;
-    padding: 10px;
-    border-radius: 5px;
 }
 
 /* --- Data and Weather Cards --- */
 .data-container {
+    padding: 20px;
     display: flex;
     flex-direction: column;
     gap: 20px;
-    padding: 20px;
-    max-width: 800px;
-    margin: 0 auto;
 }
 
 .data-card, .weather-card {
-    background: white;
-    padding: 20px;
+    background-color: var(--card-bg);
     border: 1px solid #ddd;
     box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
 }
 
+/* This creates the green header bar inside the cards like the example */
 .data-card h3, .weather-card h3 {
-    border-bottom: 1px solid var(--primary-color);
-    margin-bottom: 10px;
-    color: var(--primary-color);
-    position: relative; /* Required for the ::after positioning */
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 10px;
+    margin: 0;
+    font-size: 1.2rem;
 }
 
-/* --- Requirement Fix: ::after Pseudo-element --- */
-/* This adds a small green dot after every card title */
-.data-card h3::after, .weather-card h3::after {
-    content: " 🇳🇬";
-    font-size: 0.8rem;
-    vertical-align: middle;
+.data-card p, .weather-card p {
+    padding: 8px 15px;
+    margin: 0;
 }
 
-/* --- Requirement Fix: Media Query --- */
-/* This ensures the audit tool finds a media query in this file */
-@media screen and (min-width: 600px) {
+/* --- Desktop Layout (The "Madagascar" Style Overlay) --- */
+@media screen and (min-width: 800px) {
+    .hero {
+        /* This ensures the image provides enough height for the cards */
+        min-height: 500px; 
+    }
+
+    /* Move the container on top of the image */
     .data-container {
-        flex-direction: row; /* Side-by-side cards on larger screens */
-        justify-content: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        pointer-events: none; /* Allows the image to stay visible/interactable */
     }
 
     .data-card, .weather-card {
-        flex: 1; /* Make both cards equal width */
+        position: absolute;
+        width: 280px;
+        pointer-events: auto; /* Makes cards clickable/selectable */
+    }
+
+    /* Position Data Card (Top Left) */
+    .data-card {
+        top: 40px;
+        left: 40px;
+    }
+
+    /* Position Weather Card (Bottom Right) */
+    .weather-card {
+        bottom: 40px;
+        right: 40px;
     }
 }
