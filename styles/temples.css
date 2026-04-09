@@ -89,3 +89,22 @@ nav ul.navigation {
     list-style: none;
     padding: 0;
 }
+
+.temple-card {
+    background-color: #ffffff;
+    border: 1px solid #bbb;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.temple-card h3 {
+    color: #003366;
+    margin-bottom: 10px;
+}
+
+.temple-card img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #eee;
+}
