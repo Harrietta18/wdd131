@@ -1,4 +1,4 @@
-/ 1. Temple Data Array
+// 1. Temple Data Array
 const temples = [
   {
     templeName: "Aba Nigeria",
