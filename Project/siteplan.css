@@ -1,0 +1,20 @@
+/* Example CSS for your Site Plan */
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #F4F4F4;
+    color: #333;
+}
+
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: #008751; /* Your Primary Color */
+}
+
+.color-palette {
+    display: flex;
+    gap: 10px;
+}
+
+/* Use these classes to show your colors in the plan */
+.primary { background-color: #008751; color: white; padding: 10px; }
+.accent { background-color: #FF9900; padding: 10px; }
