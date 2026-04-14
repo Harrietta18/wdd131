@@ -3,50 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lagos Tech Hubs Site Plan</title>
-    <link rel="stylesheet" href="siteplan.css">
-    </head>
-
-    <body>
+    <title>LagosHub Connect | Site Plan</title>
+    <meta name="author" content="Erhurhe Harrietta">
+    <meta name="description" content="Site planning document for the Lagos Tech Hubs Directory project.">
+    <link rel="stylesheet" href="styles/siteplan.css">
+</head>
+<body>
     <header>
-        <h1>LagosHub Connect: Site Plan</h1>
+        <h1>LagosHub Connect Site Plan</h1>
+        <h2>Erhurhe Harrietta</h2>
     </header>
     <main>
         <section>
-            <h2>Site Name</h2>
+            <h3>Site Name</h3>
             <p><strong>LagosHub Connect</strong></p>
-            <p>I chose this name because it directly identifies the location and the core service (connecting people to hubs).</p>
+            <p>This name was chosen because it highlights the geographical focus (Lagos) and the site's primary function of connecting professionals to tech resources.</p>
         </section>
 
         <section>
-            <h2>Site Purpose</h2>
-            <p>To provide a searchable, dynamic directory of innovation hubs in Lagos to help tech professionals find reliable workspaces.</p>
+            <h3>Site Purpose</h3>
+            <p>To provide a high-quality, interactive directory of tech hubs in Lagos. It aims to help tech workers find spaces that match their specific needs for power, internet, and community.</p>
         </section>
 
         <section>
-            <h2>Scenarios</h2>
+            <h3>Scenarios</h3>
             <ul>
-                <li>Where can I find a hub in Lekki with 24/7 power?</li>
-                <li>Which hubs offer private meeting rooms for team sessions?</li>
+                <li>"Which tech hubs in Yaba offer 24/7 access for late-night developers?"</li>
+                <li>"Where can I find a co-working space with meeting rooms for a client presentation?"</li>
             </ul>
         </section>
 
         <section>
-            <h2>Color Schema</h2>
-            <p>Primary: #008751 (Headings) | Secondary: #F4F4F4 (Background)</p>
-            </section>
-
-        <section>
-            <h2>Typography</h2>
-            <p>Headings: Montserrat | Body: Open Sans</p>
+            <h3>Color Schema</h3>
+            <div class="color-palette">
+                <div class="color-box primary">Primary: #008751 (Nigerian Green)</div>
+                <div class="color-box secondary">Secondary: #FFBE0B (Amber)</div>
+                <div class="color-box accent">Accent: #333333 (Dark Grey)</div>
+            </div>
+            <p>The green represents our national identity, while the amber provides high-contrast call-to-action buttons.</p>
         </section>
 
         <section>
-            <h2>Wireframes</h2>
-            <h3>Mobile View</h3>
-            <img src="images/wireframe-mobile.png" alt="Mobile Wireframe">
-            <h3>Desktop View</h3>
-            <img src="images/wireframe-desktop.png" alt="Desktop Wireframe">
+            <h3>Typography</h3>
+            <p><strong>Headings:</strong> 'Montserrat', sans-serif - A clean, bold font for a modern tech feel.</p>
+            <p><strong>Body:</strong> 'Open Sans', sans-serif - Optimized for readability across all device sizes.</p>
+        </section>
+
+        <section>
+            <h3>Wireframes</h3>
+            <p>The following wireframes demonstrate the responsive transition from a single-column mobile view to a multi-column desktop grid.</p>
+            
+            <div class="wireframe-container">
+                <div class="mockup mobile">
+                    <h4>Mobile View</h4>
+                    <div class="w-nav">Nav</div>
+                    <div class="w-hero">Hero</div>
+                    <div class="w-card">Hub A</div>
+                    <div class="w-card">Hub B</div>
+                    <div class="w-footer">Footer</div>
+                </div>
+
+                <div class="mockup desktop">
+                    <h4>Desktop View</h4>
+                    <div class="w-nav">Logo & Horizontal Navigation</div>
+                    <div class="w-hero">Full-Width Hero Image</div>
+                    <div class="w-grid">
+                        <div class="w-card">Hub Card 1</div>
+                        <div class="w-card">Hub Card 2</div>
+                        <div class="w-card">Hub Card 3</div>
+                        <div class="w-card">Hub Card 4</div>
+                    </div>
+                    <div class="w-footer">Footer Content</div>
+                </div>
+            </div>
         </section>
     </main>
+    <footer>
+        <p>©<span id="year"></span> | Erhurhe Harrietta | Site Plan</p>
+    </footer>
 </body>
+</html>
