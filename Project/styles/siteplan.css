@@ -1,135 +1,76 @@
-/* --- Professional Design Variables --- */
+/* --- ROOT VARIABLES --- */
 :root {
-    --primary-green: #008751;
-    --amber-accent: #FFBE0B;
-    --dark-bg: #1a1a1a;
-    --light-bg: #f8f9fa;
-    --card-shadow: 0 10px 20px rgba(0,0,0,0.1);
-    --transition: all 0.3s ease;
+    --primary: #008751;
+    --secondary: #FFBE0B;
+    --dark: #333333;
+    --light: #f9f9f9;
 }
 
+/* --- BASE STYLES --- */
 body {
-    font-family: 'Inter', system-ui, sans-serif;
-    background-color: var(--light-bg);
-    color: #333;
+    font-family: 'Open Sans', sans-serif;
+    color: var(--dark);
     line-height: 1.6;
-}
-
-/* --- Navigation & Header --- */
-header {
-    background: var(--dark-bg);
-    color: white;
-    padding: 2rem 1rem;
-    text-align: center;
-}
-
-nav {
-    background: var(--primary-green);
-    position: sticky; /* Modern feature */
-    top: 0;
-    z-index: 1000;
-    display: flex;
-    justify-content: center;
-    padding: 0.8rem;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    padding: 0.5rem 1.5rem;
-    font-weight: 600;
-    transition: var(--transition);
-}
-
-nav a:hover {
-    background: rgba(255,255,255,0.1);
-    color: var(--amber-accent);
-}
-
-/* --- Hero Section with Overlay --- */
-.hero {
-    position: relative;
-    height: 400px;
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../images/hero.jpg');
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-}
-
-/* --- Responsive Hub Grid --- */
-.hub-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 2rem;
-    padding: 3rem 1rem;
-    max-width: 1200px;
     margin: 0 auto;
+    max-width: 1000px;
+    padding: 20px;
 }
 
-.hub-card {
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--primary);
+}
+
+header {
+    text-align: center;
+    border-bottom: 5px solid var(--secondary);
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+}
+
+section {
+    margin-bottom: 40px;
+    padding: 20px;
     background: white;
-    border-radius: 12px;
-    overflow: hidden; /* Clips image corners */
-    box-shadow: var(--card-shadow);
-    transition: var(--transition);
-    border: 1px solid #eee;
+    border: 1px solid #ddd;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.05);
 }
 
-.hub-card:hover {
-    transform: translateY(-10px); /* Hover effect for higher score */
-    border-color: var(--primary-green);
+/* --- COLOR BOXES --- */
+.color-palette { display: flex; gap: 10px; margin-bottom: 10px; }
+.color-box { padding: 15px; border-radius: 4px; font-weight: bold; flex: 1; text-align: center; }
+.primary { background: var(--primary); color: white; }
+.secondary { background: var(--secondary); color: var(--dark); }
+.accent { background: var(--dark); color: white; }
+
+/* --- WIREFRAME MOCKUPS --- */
+.wireframe-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    background: #e0e0e0;
+    padding: 30px;
+    border-radius: 8px;
 }
 
-.hub-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.hub-card-content {
-    padding: 1.5rem;
-}
-
-.hub-card h3 {
-    color: var(--primary-green);
-    margin-bottom: 0.5rem;
-}
-
-/* --- Modern Form Styling --- */
-.form-container {
-    max-width: 700px;
+.mockup {
     background: white;
-    padding: 3rem;
-    margin: 3rem auto;
-    border-radius: 15px;
-    box-shadow: var(--card-shadow);
+    border: 3px solid var(--dark);
+    padding: 10px;
+    border-radius: 4px;
 }
 
-input, select, textarea {
-    width: 100%;
-    padding: 12px;
-    margin: 10px 0 20px 0;
-    border: 2px solid #eee;
-    border-radius: 6px;
-    transition: var(--transition);
-}
+.mobile { width: 180px; }
+.desktop { width: 500px; }
 
-input:focus {
-    border-color: var(--primary-green);
-    outline: none;
-}
+.w-nav, .w-footer { background: var(--primary); color: white; padding: 10px; margin: 5px 0; font-size: 0.7rem; }
+.w-hero { background: #bbb; height: 60px; margin: 5px 0; display: flex; align-items: center; justify-content: center; font-size: 0.7rem; }
+.w-card { background: var(--light); border: 1px solid #ccc; padding: 10px; margin: 5px 0; font-size: 0.6rem; }
 
-.btn-submit {
-    background: var(--amber-accent);
-    color: var(--dark-bg);
-    border: none;
-    padding: 15px 30px;
-    font-weight: bold;
-    border-radius: 6px;
-    cursor: pointer;
-    width: 100%;
+/* Desktop Grid */
+.w-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
 }
