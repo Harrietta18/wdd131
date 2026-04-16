@@ -3,83 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LagosHub Connect | Site Plan</title>
-    <meta name="author" content="Erhurhe Harrietta">
-    <meta name="description" content="Site planning document for the Lagos Tech Hubs Directory project.">
+    <title>LagosHub Connect | Directory</title>
     <link rel="stylesheet" href="styles/siteplan.css">
+    <script src="scripts/siteplan.js" defer></script>
 </head>
 <body>
-    <header>
-        <h1>LagosHub Connect Site Plan</h1>
-        <h2>Erhurhe Harrietta</h2>
-    </header>
+    <header><h1>LagosHub Connect</h1></header>
+    <nav>
+        <a href="index.html">Directory</a>
+        <a href="join.html">Join Us</a>
+        <a href="about.html">About</a>
+    </nav>
+
     <main>
-        <section>
-            <h3>Site Name</h3>
-            <p><strong>LagosHub Connect</strong></p>
-            <p>This name was chosen because it highlights the geographical focus (Lagos) and the site's primary function of connecting professionals to tech resources.</p>
+        <div class="hero">
+            <img src="images/lagos-tech.jpg" alt="Lagos Tech Scene" loading="lazy">
+            <h1>Find Your Space</h1>
+        </div>
+
+        <section id="filters" style="text-align: center; padding: 20px;">
+            <button id="filter-all">All Hubs</button>
+            <button id="filter-yaba">Yaba</button>
+            <button id="filter-lekki">Lekki</button>
         </section>
 
-        <section>
-            <h3>Site Purpose</h3>
-            <p>To provide a high-quality, interactive directory of tech hubs in Lagos. It aims to help tech workers find spaces that match their specific needs for power, internet, and community.</p>
-        </section>
-
-        <section>
-            <h3>Scenarios</h3>
-            <ul>
-                <li>"Which tech hubs in Yaba offer 24/7 access for late-night developers?"</li>
-                <li>"Where can I find a co-working space with meeting rooms for a client presentation?"</li>
-            </ul>
-        </section>
-
-        <section>
-            <h3>Color Schema</h3>
-            <div class="color-palette">
-                <div class="color-box primary">Primary: #008751 (Nigerian Green)</div>
-                <div class="color-box secondary">Secondary: #FFBE0B (Amber)</div>
-                <div class="color-box accent">Accent: #333333 (Dark Grey)</div>
+        <div id="hub-container" class="hub-grid">
             </div>
-            <p>The green represents our national identity, while the amber provides high-contrast call-to-action buttons.</p>
-        </section>
-
-        <section>
-            <h3>Typography</h3>
-            <p><strong>Headings:</strong> 'Montserrat', sans-serif - A clean, bold font for a modern tech feel.</p>
-            <p><strong>Body:</strong> 'Open Sans', sans-serif - Optimized for readability across all device sizes.</p>
-        </section>
-
-        <section>
-            <h3>Wireframes</h3>
-            <p>The following wireframes demonstrate the responsive transition from a single-column mobile view to a multi-column desktop grid.</p>
-            
-            <div class="wireframe-container">
-                <div class="mockup mobile">
-                    <h4>Mobile View</h4>
-                    <div class="w-nav">Nav</div>
-                    <div class="w-hero">Hero</div>
-                    <div class="w-card">Hub A</div>
-                    <div class="w-card">Hub B</div>
-                    <div class="w-footer">Footer</div>
-                </div>
-
-                <div class="mockup desktop">
-                    <h4>Desktop View</h4>
-                    <div class="w-nav">Logo & Horizontal Navigation</div>
-                    <div class="w-hero">Full-Width Hero Image</div>
-                    <div class="w-grid">
-                        <div class="w-card">Hub Card 1</div>
-                        <div class="w-card">Hub Card 2</div>
-                        <div class="w-card">Hub Card 3</div>
-                        <div class="w-card">Hub Card 4</div>
-                    </div>
-                    <div class="w-footer">Footer Content</div>
-                </div>
-            </div>
-        </section>
     </main>
+
     <footer>
-        <p>©<span id="year"></span> | Erhurhe Harrietta | Site Plan</p>
+        <p>©<span id="year"></span> | Erhurhe Harrietta | <a href="references.html">References</a></p>
+        <p id="lastModified"></p>
     </footer>
 </body>
 </html>
