@@ -8,7 +8,10 @@
     <script src="scripts/lagos-hub.js" defer></script>
 </head>
 <body>
-    <header><h1>LagosHub Connect</h1></header>
+    <header>
+        <h1>LagosHub Connect</h1>
+    </header>
+    
     <nav>
         <a href="index.html">Directory</a>
         <a href="join.html">Join Us</a>
@@ -16,38 +19,54 @@
     </nav>
 
     <main>
+        <div class="hero" style="height: 200px;">
+            <img src="images/heroes.webp" alt="Collaborative Workspace" loading="lazy">
+            <h1 style="font-size: 2rem;">Join the Ecosystem</h1>
+        </div>
+
         <section class="form-container">
-            <h2>Partner With Us</h2>
-            <p>Are you a hub owner? Register your space below.</p>
+            <div style="text-align: center; padding: 20px;">
+                <h2>Get Connected</h2>
+                <p>Whether you are a hub owner listing a space or a professional looking for a community, register below to stay updated.</p>
+            </div>
+
             <form action="thanks.html" method="get" class="hub-form">
-                <label for="fname">First Name:</label>
-                <input type="text" id="fname" name="fname" required>
+                
+                <label for="user-type">I am a:</label>
+                <select id="user-type" name="user-type" required>
+                    <option value="" disabled selected>Select your role</option>
+                    <option value="owner">Hub Owner / Manager</option>
+                    <option value="developer">Developer / Freelancer</option>
+                    <option value="student">Student / Aspiring Techie</option>
+                    <option value="other">Other Professional</option>
+                </select>
 
-                <label for="hname">Hub Name:</label>
-                <input type="text" id="hname" name="hname" required>
+                <label for="fname">Full Name:</label>
+                <input type="text" id="fname" name="fname" required placeholder="Enter your name">
 
-                <label for="email">Email:</label>
+                <label for="email">Email Address:</label>
                 <input type="email" id="email" name="email" required placeholder="example@email.com">
 
-                <label for="location">Location:</label>
-                <select id="location" name="location">
+                <label for="location-pref">Preferred Location:</label>
+                <select id="location-pref" name="location-pref">
                     <option value="yaba">Yaba</option>
                     <option value="lekki">Lekki</option>
                     <option value="ikeja">Ikeja</option>
-                    <option value="victoria-island">Victoria Island</option>
+                    <option value="vi">Victoria Island</option>
+                    <option value="other">Other / Remote</option>
                 </select>
 
-                <label for="message">About Your Hub:</label>
-                <textarea id="message" name="message" rows="4"></textarea>
+                <label for="message">How can we help you? (Or tell us about your hub):</label>
+                <textarea id="message" name="message" rows="4" placeholder="I'm looking for a desk / I'm listing my new innovation hub..."></textarea>
 
-                <button type="submit" class="btn">Register Hub</button>
+                <button type="submit" class="btn-submit" style="width: 100%; margin-top: 20px;">Register Now</button>
             </form>
         </section>
     </main>
 
     <footer>
-        <p>©<span id="currentyear"></span> | Erhurhe Harrietta | <a href="references.html">References</a></p>
-    <p id="lastModified"></p>
+        <p>©<span id="currentyear"></span> | Erhurhe Harrietta | <a href="reference.html">References</a></p>
+        <p id="lastModified"></p>
     </footer>
 </body>
 </html>
